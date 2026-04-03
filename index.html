@@ -255,6 +255,35 @@
             font-size: 0.85rem;
         }
 
+        .leadership-table {
+            background: #0f1117;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin: 1rem 0 0.5rem;
+            border: 1px solid #2d3748;
+        }
+
+        .leadership-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #1f2937;
+            font-size: 0.9rem;
+        }
+
+        .leadership-row:last-child {
+            border-bottom: none;
+        }
+
+        .leadership-name {
+            font-weight: 600;
+            color: #a5b4fc;
+        }
+
+        .leadership-role {
+            color: #9ca3af;
+        }
+
         footer {
             margin-top: 4rem;
             text-align: center;
@@ -308,7 +337,16 @@
             color: #a78bfa;
         }
 
-        /* анимация для кнопок */
+        .exception {
+            color: #4ade80;
+            font-size: 0.85rem;
+        }
+
+        .note {
+            color: #facc15;
+            font-size: 0.85rem;
+        }
+
         @keyframes subtle-pulse {
             0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
             70% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0); }
@@ -331,7 +369,6 @@
         </div>
         <div class="subhead" style="margin-top: 1rem;">Регистрируясь, вы автоматически принимаете правила</div>
         
-        <!-- БЛОК СОЦИАЛЬНЫХ КНОПОК: только Discord -->
         <div class="social-links">
             <a href="https://discord.gg/2MeEdfkvJF" target="_blank" class="social-btn discord" id="discordLink">
                 <i class="fab fa-discord"></i> Discord сервер
@@ -340,7 +377,7 @@
     </div>
 
     <div class="rules-grid">
-        <!-- 1. Общие положения -->
+        <!-- ===== 1. ОБЩИЕ ПОЛОЖЕНИЯ ===== -->
         <div class="rule-section">
             <div class="section-header">
                 <i class="fas fa-scroll section-icon"></i>
@@ -349,151 +386,113 @@
             </div>
             <div class="rule-content">
                 <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text">📌 <strong>1.1</strong> Данный свод правил составлен представителем проекта KastWorld и действителен на всех игровых режимах проекта KastWorld. Незнание правил не освобождает нарушителя от ответственности, а также может усугубить наказание.</span></li>
-                    <li class="rule-item"><span class="rule-text">🌐 <strong>1.2</strong> Проект KastWorld — комплекс серверов, расположенных по адресу: <span class="inline-code">kastworld.aurorix.pro</span>. Все остальные домены таковыми не являются. Регистрируясь на нашем проекте, вы автоматически принимаете данные правила, а также правила других режимов.</span></li>
-                    <li class="rule-item"><span class="rule-text">⚙️ <strong>1.3</strong> Правила могут быть изменены без явного оповещения основной аудитории проекта. При значительных изменениях правил, на форуме проекта отображается объявление.</span></li>
-                    <li class="rule-item"><span class="rule-text">👑 <strong>1.4</strong> Решения и действия главной администрации (<span class="badge-admin">@kashtans.1337</span>) не обсуждаются и не поддаются разжалованию. Главная администрация вправе выдавать наказания вне рамок данных правил.</span></li>
-                    <li class="rule-item"><span class="rule-text">💔 <strong>1.5</strong> Администрация сервера не выдаёт игровые ресурсы/компенсации за их потерю в результате кика сервера, лагов/багов, а также действия игроков, использующие запрещённое ПО (читы).</span></li>
-                    <li class="rule-item"><span class="rule-text">🚫 <strong>1.6</strong> Продажа, взломы, попытки взломов, передачи аккаунтов, покупки аккаунтов в обход официального сайта, распространение данных игроков, вред серверу, а так же продажи/покупки чего либо за реальную валюту — строго запрещены. Наказание — <strong>отключение всех аккаунтов без возможности приобрести разбан</strong>. Соучастие, содействие, совместная игра с нарушителями так же попадают под это правило. Аккаунты с которых был нанесен серьезный вред проекту — не подлежат восстановлению, даже если аккаунт был в тот момент взломан или добровольно передан или продан. Ответственность несет владелец аккаунта, независимо от того, кто совершал действия под данным аккаунтом.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.1</strong> Незнание правил не освобождает от ответственности. Регистрируясь и играя на сервере, вы соглашаетесь со всеми установленными правилами.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.2</strong> Запрещено популяризировать материалы и идеи, которые нарушают общепринятые моральные принципы (терроризм, экстремизм и другие подобные вещи). Пропаганда фашизма и нацизма полностью запрещена. Также запрещены ссылки на контент для взрослых, эротический, шокирующий, содержащий скримеры и аналогичный контент (что в игре, что в прилежащих к ней сетях).</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.3</strong> Решения и действия руководства проекта являются окончательными и не подлежат обсуждению или обжалованию. Руководство проекта имеет право накладывать санкции, выходящие за рамки данных правил.<br><span class="note">Примечание: список руководства представлен ниже.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.4</strong> Деньги, потраченные на платные услуги, не возвращаются. При покупке или выдаче новой привилегии старая автоматически удаляется.<br><strong>1.4.1</strong> Перевод приобретенных услуг на другие аккаунты и другие режимы проекта не осуществляется.<br><span class="exception">Исключение: игрок ошибочно приобрел услугу на другой режим или указал неверный никнейм — в данном случае перевод может быть осуществлен при предоставлении чека покупки.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.5</strong> Запрещено выдавать себя за представителей команды проекта, а также использовать их никнеймы или схожие с ними. <span class="punishment">Ban на 3 дня</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.6</strong> Запрещена реклама посторонних ресурсов. Пример: сторонние ссылки, упоминание других проектов, читов, неофициальные источники информации о проекте и т.п.<br><span class="exception">Исключение: ReallyWorld</span><br><span class="note">Примечание: наборы в кланы с указанием в сообщении Discord принимающего заявки также наказываются.</span> <span class="punishment">Ban на 30 дней | permban</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.7</strong> Запрещен обход бана/мута любым путем. <span class="punishment">Ban 5д</span><br><span class="note">Примечание: при обходе бана наказание выдаётся по множителю x9 (45 дней). При покупке разблокировки на сайте вы обязаны купить её на все аккаунты с наказанием.</span><br><span class="exception">Исключение: бан при правиле 1.16</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.8</strong> Запрещена продажа/покупка донатных предметов/аккаунтов/привилегий/валюты/китов за реальные деньги. Также запрещено обменивать донат. <span class="punishment">permban | ЧСП</span><br><strong>1.8.1</strong> Запрещены подставы игроков (в любом их виде).<br><span class="note">Примечание: покупка осуществляется только на официальном сайте проекта.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.9</strong> Администрация сервера не компенсирует ресурсы (деньги) из-за киков, лагов, багов, плановых работ или действий игроков, нарушающих правила проекта.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.10</strong> Передача аккаунта третьим лицам запрещена. Ответственность за свой аккаунт несет только владелец аккаунта. Неважно, кому вы его даете поиграть. <span class="punishment">permban</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.11</strong> Данные правила могут изменяться без оповещения игроков сервера.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.12</strong> Запрещено использовать ошибки и недочеты, а также баги проекта в свою пользу или пользу третьих лиц. Запрещено пользоваться недочетами правил и их "лазейками" в свою пользу. <span class="punishment">Ban на 6 часов - 7 дней. В зависимости от тяжести нарушения.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.14</strong> Запрещено использование (хранение) читерских модификаций или багов, чтобы получить не достойное преимущество в игре. Проверять игрока на читы может только модерация. Любая попытка игрока прекратить или закрыть демонстрацию экрана при проверке модератором будет рассматриваться как отказ от проверки. На все заданные вопросы и просьбы модератора игрок должен отвечать и выполнять. <span class="punishment">Ban на 50 дней</span><br><strong>1.14.1</strong> Запрещена намеренная игра в команде с нарушителем пункта 1.14 (читером). <span class="punishment">Ban на 30 дней</span><br><strong>1.14.2</strong> Признание в использовании читов. <span class="punishment">Ban на 40 дней</span><br><strong>1.14.3</strong> Ознакомиться со списком запрещенных модификаций и наказаний — ТЫК<br><span class="exception">Исключение: GRIEF - 2</span><br><span class="note">Примечание: отказы, игнор, уклон, окончание времени, неадекватное поведение также наказываются по пункту 1.14. С удаления стороннего ПО должно пройти 30+ дней. Дополнительное время при проверке выдаётся по желанию модератора.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.15</strong> Запрещено создание и использование лаг-машин, дюпов, багов или других действий, наносящих ущерб серверу и/или его официальным ресурсам. <span class="punishment">permban | ЧСП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.16</strong> Запрещены ники, содержащие бессвязный набор символов, оскорбления, названия сторонних ПО. <span class="punishment">permban (Если это результат изменения ника через /nick — удаление ника)</span><br>Пример: ajkfshja, DeltaTop, dolboyobi322.<br><span class="exception">Исключение: если на аккаунте имеется покупная привилегия, то правило по поводу набора символов не распространяется на аккаунт.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>1.17</strong> Запрещен обман модерации/администрации в целях своей выгоды. <span class="punishment">Ban на 7 дней</span></span></li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. Регистрация -->
-        <div class="rule-section">
-            <div class="section-header">
-                <i class="fas fa-user-plus section-icon"></i>
-                <span class="section-title">2. Регистрация и аккаунты</span>
-                <span class="section-desc">Корректный никнейм — залог игры</span>
-            </div>
-            <div class="rule-content">
-                <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text"><strong>2.1</strong> Никнейм пользователя должен быть корректным. Некорректным можно назвать любой ник, нарушающий закрепленные правила, а также: никнейм, похожий на никнейм высшей Администрации (исключение – никнеймы ютуберов проекта); никнейм сексуального, аморального содержания; никнейм, оскорбляющий другого игрока; содержащий названия запрещенных ПО; содержащий грубые матерные слова; бессмысленный набор символов/цифр от 8 символов (исключение – аккаунты с платной услугой). <span class="punishment">блокировка / предупреждение</span></span></li>
-                    <li class="rule-item"><span class="rule-text">🧾 <strong>2.2-2.3</strong> При покупке платных дополнительных возможностей (групп), кейсов, рилликов, предоставленный системой чек необходимо сохранить. При утере/взломе аккаунта обращаться в техподдержку. Без электронного чека в восстановлении будет отказано. Безопасность аккаунта не гарантируется проектом, администрация вправе отказать в восстановлении или обнулить/заблокировать аккаунт при нанесении серьезного вреда.</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 3. Платные услуги -->
-        <div class="rule-section">
-            <div class="section-header">
-                <i class="fas fa-ruble-sign section-icon"></i>
-                <span class="section-title">3. Донат и пожертвования</span>
-                <span class="section-desc">Добровольные пожертвования</span>
-            </div>
-            <div class="rule-content">
-                <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text">💎 <strong>3.1-3.2</strong> Игра на проекте не подразумевает платы за использование ресурсов KastWorld. Игрок вправе добровольно оплатить определённую сумму проекту за внутриигровую услугу в одностороннем порядке.</span></li>
-                    <li class="rule-item"><span class="rule-text">🔁 <strong>3.3-3.4</strong> При ошибке платежа либо отсутствия услуги после оплаты обращаться в техподдержку с электронным чеком. Возврата средств за покупки нет, так как KastWorld не является коммерческой организацией, и все покупки являются добровольными пожертвованиями на развитие сервера.</span></li>
-                    <li class="rule-item"><span class="rule-text">⚠️ <strong>3.6</strong> Покупка платных групп не даёт привилегии на игнорирование/нарушение данных правил.</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 4. Общение и чат (основной) -->
+        <!-- ===== 2. ОСНОВНЫЕ ПРАВИЛА ===== -->
         <div class="rule-section">
             <div class="section-header">
                 <i class="fas fa-comments section-icon"></i>
-                <span class="section-title">4. Общение и чат</span>
+                <span class="section-title">2. Основные правила</span>
                 <span class="section-desc">Уважение и порядок</span>
             </div>
             <div class="rule-content">
                 <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text"><strong>4.1-4.1.2</strong> Флуд: больше 2 одинаковых/похожих сообщений подряд за минуту. Запрещены сговоры с твинками для обхода, использование объявлений (/bc) для флуда. <span class="punishment">мут 4-6ч</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.2</strong> Флуд символами ("!!!!!!!!!!!!!!!!") более 10 символов, злоупотребление капсом (>50% Caps в предложении). <span class="punishment">мут 4ч</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.3-4.3.1</strong> Организация флуда опросами "отправьте + в чат" (кроме приюта/продажи/обмена). При 6+ ответивших — мут 6ч инициатору, остальным 4ч.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.4-4.4.2</strong> Неадекватное поведение, оскорбления, унижения, угрозы, злоупотребление нецензурной лексикой, аморальные темы, призывы к суициду. <span class="punishment">мут 2-12ч</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.5-4.5.1</strong> Выпрашивание снятия наказаний или ресурсов у Администрации (кроме @kashtans.1337 ). <span class="punishment">мут 1-2ч</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.6-4.6.1</strong> Дезинформация игроков ("Скоро вайп"), вне-игровой обман (Alt+F4, F3+C,). <span class="punishment">мут 12ч / 4д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.7-4.7.4</strong> Упоминание сторонних проектов, Discord/Telegram-контактов, реклама, вредоносные ссылки. <span class="punishment">мут 1д — бан 60д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.8-4.8.1</strong> Оскорбление родителей любого игрока или своих родителей. <span class="punishment">мут 5-15 дней</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.9</strong> Затрагивание политики, политическая агитация. <span class="punishment">бан 3-7д или мут 2д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.10-4.11.4</strong> Выдача себя за администрацию, оскорбление модерации и администрации, угрозы, неуважительное общение. <span class="punishment">бан 12ч — 20д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.12</strong> Оскорбление ютуберов проекта. <span class="punishment">бан 1-5д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.13</strong> Пропаганда нацизма, расизма, наркотиков, оружия, терроризма. <span class="punishment">бан 7д</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.14</strong> Доксинг, сватинг, распространение личных данных, угрозы. <span class="punishment">бан 30д — отключение аккаунта для сотрудников</span></span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>4.15-4.17</strong> Провокация на нарушение правил, упоминание реальной валюты, музыка/посторонние звуки в голосовом чате. <span class="punishment">бан/мут от 12ч до 2д</span></span></li>
-                </ul>
-                <div class="warning-note">
-                    <i class="fas fa-microphone-alt"></i> <strong>Важно:</strong> За злоупотребление /bc и префиксами донатеров — наказание по пункту 8.1 (бан 1-4 дня). Кастомный префикс должен соответствовать всем правилам сервера и не имитировать администрацию (Helper, Moder и т.д).
-                </div>
-            </div>
-        </div>
-
-        <!-- 5. Читы и софт -->
-        <div class="rule-section">
-            <div class="section-header">
-                <i class="fas fa-skull-crossbones section-icon"></i>
-                <span class="section-title">5. Читы, софт и нечестная игра</span>
-                <span class="section-desc">Zero tolerance</span>
-            </div>
-            <div class="rule-content">
-                <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text"><strong>5.2</strong> Использование вредоносного, читерского ПО, получение преимущества над игроками — <span class="punishment">бан 50 дней + снос основного дома + возможное отключение аккаунта</span>.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>5.2.1-5.2.3</strong> Совместная игра с читером — бан 47 дней; признание в наличии читов — бан 10д.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>5.2.4-5.2.5.1</strong> Обход блокировки аккаунта (вход с любого аккаунта после блокировки) — <span class="punishment">бан 70д</span>. Хранение читов — бан 50д.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>5.2.6-5.2.7</strong> Использование автокопателей, лесорубов — 5д; ботов, макросов, автоматизация сложных процессов — 15д.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>5.2.8-5.2.11</strong> Неадекватное поведение на проверке, виртуальные машины, манипуляции с доступом, .bat файлы на чистку — <span class="punishment">бан 50д</span>.</span></li>
-                </ul>
-                <hr>
-                <div><i class="fas fa-ban" style="color:#f87171;"></i> <strong>Запрещенные моды (примеры):</strong></div>
-                <ul class="sub-list">
-                    <li>ArmorHotSwap — <span class="punishment">5д</span></li>
-                    <li>Slippery Mod, StepUp, Inventory Totem, FreeCam, X-Ray, ChestESP, AutoAttack, Baritone, NoClipFlyMod — <strong>до 50 дней бана</strong></li>
-                    <li>InvMove, TopkaAutoBuy, CleanCut, Grass Bypass, моды на изменение хитбоксов — от 7 до 15 дней</li>
-                    <li>Любые интерпретации чит-функций, Aim Assistance, AutoLook, Zergatul.cheatutils — 50 дней бана</li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.1</strong> Запрещено флудить в чате, отправляя однотипные или одинаковые сообщения подряд, капсить. <span class="punishment">Mute на 4 часа</span><br><span class="note">Примечание: больше 3 сообщений в минуту. Капс от 3 символов. Громкие звуки в голосовом чате также наказываются.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.2</strong> Запрещено использование бессмысленных символов, таких как "!!!!!!!", или чрезмерный смех в чате. <span class="punishment">Mute на 4 часа</span><br><span class="note">Примечание: от 10 символов.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.3</strong> Запрещено организовывать флуд с помощью опросов или запросов типа "Отправить + в чат". <span class="punishment">Mute на 4 часа</span><br><span class="exception">Исключения: просьбы обменять ресурс или пригласить в клан.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.4</strong> Запрещено неадекватное поведение, агрессия, оскорбления игроков и аморальное поведение. <span class="punishment">Mute от 2 до 12 часов</span><br><span class="exception">Исключение: ezz, езка, сосо, тупой и т.п.</span><br><span class="note">Примечание: время наказания выдаётся на усмотрение модератора. Музыка в войсе наказывается этим же пунктом.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.5</strong> Запрещено оскорбление проекта, модераторов и администрации. <span class="punishment">Ban на 12 часов</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.6</strong> Запрещены призывы к суициду, политическая агитация, расизм, нацизм и другие подобные проявления. <span class="punishment">Ban от 3 до 7 дней</span><br><span class="note">Примечание: время наказания выдаётся на усмотрение модератора.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.7</strong> Запрещены оскорбления или косвенные упоминания родных игроков проекта. <span class="punishment">Mute от 6 до 12 часов</span><br><span class="note">Примечание: "mq" (маме ку) также наказывается.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.8</strong> Запрещено распространение прямых ссылок и личных данных игроков (докс, сват и т.п.). <span class="punishment">permban</span><br><span class="note">Примечание: угрозы также запрещены.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.9</strong> Запрещена клевета/распространение ложной информации о составе/сервере. <span class="punishment">Mute на 4 часа</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.10</strong> Запрещено создание варпов в трапке или же рядом с трапками (15 блоков до трапки), также ставить обсидиан (бедрок) в радиусе 15 блоков от варпа и трапки. <span class="punishment">Ban на 2 часа, удаление варпа и снос трапки</span><br><strong>2.10.1</strong> Запрещено устанавливать запрещенные предметы, хит-боксы которых препятствуют использованию жемчугов, хорусов и т.д. в трапках.<br><strong>2.10.2</strong> Запрещено создавать варпы в закрытых помещениях, игрок должен свободно выбираться с варпа.<br><span class="note">Примечание: наказание выдается владельцам региона.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.12</strong> Запрещено создание кланов с нарушением правил чата (оскорбления, аморального содержания, политического контекста). <span class="punishment">Удаление клана, аккаунт основателя блокируется на срок от 7 до 30 дней</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.13</strong> Запрещено создавать помеху в работе модерации, использовать команду "/spec" без весомой на это причины. <span class="punishment">Ban на 5 минут</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.14</strong> Запрещено использовать права привилегий в корыстных целях. Создавать помеху в PvP в "/god" и т.д. <span class="punishment">Ban на 6 часов | Снятие доната</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.15</strong> Запрещено использование автокликера в казино, на работах. <span class="punishment">Обнуление баланса + Ban на 3 дня</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>2.16</strong> Запрещены заливы регионов игроков, домов и т.д. <span class="punishment">Ban на 7 дней</span></span></li>
                 </ul>
             </div>
         </div>
 
-        <!-- 6. Игровой процесс -->
-        <div class="rule-section">
-            <div class="section-header">
-                <i class="fas fa-trowel section-icon"></i>
-                <span class="section-title">6. Игровой процесс, баги, ловушки</span>
-                <span class="section-desc">Честная игра</span>
-            </div>
-            <div class="rule-content">
-                <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text"><strong>6.1-6.1.4</strong> Запрещены: заливы, лаг-машины, багоюз, дюпы. Создание лаг-машин — <span class="punishment">отключение аккаунта</span>. Использование и распространение дюпов — отключение аккаунта. Багоюз — бан 25д.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>6.1.3</strong> Строительство ловушек без возможности выхода (стойки, рамки, снег, песок душ) — <span class="punishment">бан 25д + снос ловушки</span>.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>6.1.5-6.2</strong> Помеха работе персонала, флуд командами (/pay более 12 раз) — кик/бан 12ч.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>6.3-6.4</strong> Некорректный текст на табличках, регионах, книгах — бан 5-30д. Жалоба на высшую администрацию с оскорблениями — бан 3-5д.</span></li>
-                    <li class="rule-item"><span class="rule-text"><strong>6.5-6.6</strong> Реклама, продажа, распространение читов, магазинов, обмен ресурсов — <span class="punishment">перманентная блокировка аккаунта</span>. Создание кланов с нарушением правил чата — удаление клана, блокировка основателя на 5-30д.</span></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- 7. Проверка AnyDesk -->
+        <!-- ===== 3. ОСНОВНЫЕ ПРАВИЛА СОСТАВА ===== -->
         <div class="rule-section">
             <div class="section-header">
                 <i class="fas fa-shield-alt section-icon"></i>
-                <span class="section-title">7. Проверка на читы (AnyDesk)</span>
-                <span class="section-desc">Прозрачность и безопасность</span>
+                <span class="section-title">3. Основные правила состава</span>
+                <span class="section-desc">Для сотрудников и донатеров</span>
             </div>
             <div class="rule-content">
                 <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text">🖥️ <strong>7.1-7.2</strong> Модерация имеет право вызвать на проверку через Discord/AnyDesk. Только доступ к мышке и клавиатуре. Проверка исключительно через компьютер. Обязательные программы: SystemInformer, Everything, RecentFilesView, ShellbagAnalyzer, RegScanner, JournalTrace. Скачивать только с официальных сайтов.</span></li>
-                    <li class="rule-item"><span class="rule-text">📁 <strong>7.3</strong> Модераторы с повышенным доверием (moder+) имеют право проверить FunPay и другие сайты для размещения ресурсов за реальную валюту.</span></li>
-                    <li class="rule-item"><span class="rule-text">🔒 <strong>7.4</strong> Проверка производится только через AnyDesk с официального сайта. Модерация не скидывает файлы для скачивания.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.0</strong> Каждый участник состава (любого, наборного и донатного) должен заполнить специальный реестр в информационном канале категории в Discord. <span class="punishment">снятие</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.1</strong> При покупке любой составной привилегии на сервере вы автоматически соглашаетесь с правилами и в случае нарушения получите соответствующее наказание.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.2</strong> Наборному и покупному составу запрещено менять свои данные (ник, Discord логин, VK ID), находясь на посту. <span class="punishment">снятие</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.3</strong> Донатный состав не относится к наборной администрации проекта.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.4</strong> Донатный и наборный состав обязан сохранять иерархию. Вы должны уважительно относиться к старшей администрации и руководству проекта.<br><strong>ADM0.4.1</strong> Ранги на сервере: <span class="inline-code">Руководство → Старшая администрация → Администрация → Модерация → Помощники</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.5</strong> Наборный и покупной состав — лицо сервера и обязан являться эталоном для подражания.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.6</strong> У донатного и покупного состава обязаны быть доказательства вины игрока, которые участник состава ОБЯЗАН хранить в течение 72 часов с момента выдачи наказания. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.7</strong> Запрещено издеваться над забаненными игроками. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.8</strong> Наборному и покупному составу после ухода со своей привилегии покупной ранг возвращается с уменьшением на один. <span class="note">Пример: Модератор → Младший Модератор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM0.9</strong> Наборному и покупному составу запрещено проявлять крайнюю некомпетентность, чрезмерно выражаться нецензурной бранью в чате игры, канале Discord и Telegram-канале. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.0</strong> Запрещено банить и/или разбанивать без веской и ясной причины. <span class="punishment">выговор</span><br><strong>ADM1.0.1</strong> Запрещено выдавать мут/кик без веской и ясной причины.</span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.1</strong> Запрещено выпрашивать повышение в должности. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.2</strong> Запрещено оскорблять и унижать достоинство игроков, демонстрировать превосходство над игроками. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.3</strong> Запрещено выдавать наказания с некорректной причиной и/или с некорректным временем наказания. <span class="punishment">выговор</span><br><span class="note">Примечание: вы обязаны выдавать наказания исключительно по пунктам, чтобы игрок мог быстро найти своё нарушение и не допускать в будущем.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.4</strong> Запрещено использовать способности своей привилегии в корыстных целях. <span class="punishment">выговор | Снятие + ЧСКП</span><br><strong>ADM1.4.1</strong> Запрещена беспорядочная раздача банов на случайные сроки (слив поста). <span class="punishment">Снятие + ЧСП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.5</strong> Запрещено неадекватно себя вести. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.6</strong> Запрещено стоять АФК более 10 минут. Для Helper — не более 30 минут. <span class="punishment">выговор</span><br><span class="exception">Исключение: помощь в жалобе.</span><br><span class="note">Примечание: не важно, стоите вы в ванише, gm3 и т.д.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.7</strong> Наборному и покупному составу запрещено разглашать внутреннюю информацию проекта и работы администрации. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.8</strong> Запрещено игнорировать руководство команды проекта. <span class="punishment">выговор</span><br><span class="note">Примечание: Руководство команды проекта — Главный модератор и выше (НЕ покупной, а наборный).</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.9</strong> Находясь в составе, запрещена снисходительность к явным нарушениям. В случае, когда при разборе жалобы вы понимаете, что нарушение незначительно, рекомендуется обойтись выговором. Однако злоупотреблять и закрывать так каждую жалобу запрещено. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.10</strong> Запрещено угрожать игрокам мутом/киком/баном/предупреждением/варном/снятием без реальной на то причины. <span class="punishment">выговор</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.11</strong> Каждый член состава (покупного и наборного) несет ответственность за безопасность своего аккаунта. Вы обязаны соблюдать все меры по обеспечению безопасности своего аккаунта, привязав аккаунт к официальному Telegram-боту и включить 2FA. <span class="punishment">снятие</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.12</strong> Персоналу запрещено лжесвидетельствовать против других участников состава, а также шантажировать доказательствами. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.13</strong> Покупному и наборному составу строго запрещается нарушать все вышеперечисленные правила проекта. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.14</strong> Запрещено наказывать модератора/медиа своего сервера и менять/снимать наказания другому игроку, которого наказывал не он. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM1.15</strong> Вы обязаны проверять игрока только через Discord или AnyDesk на усмотрение игрока. <span class="punishment">выговор | Снятие + ЧСКП</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM2.0</strong> Запрещено выдавать ресурсы, монеты, покупную валюту, привилегии, кейсы, полученные с помощью прав администратора. <span class="punishment">варн | снятие + ЧСКП / ЧСП</span><br><span class="exception">Исключение: валюту только себе (не занимая топы).</span><br><span class="note">Примечание: на все ресурсы, полученные с помощью /gm 1, должно быть наложено зачарование "Проклятие Утраты". Донатную валюту следует выдавать себе только при необходимости в данный момент времени.</span></span></li>
+                    <li class="rule-item"><span class="rule-text"><strong>ADM2.1</strong> Запрещено накладывать зачарования, превышающие допустимые игровые значения. <span class="punishment">варн | снятие</span><br><span class="note">Пример: Острота 10, Защита 10 и т.п.</span></span></li>
                 </ul>
             </div>
         </div>
 
-        <!-- 8. Донатеры -->
+        <!-- ===== РУКОВОДСТВО ПРОЕКТА ===== -->
         <div class="rule-section">
             <div class="section-header">
                 <i class="fas fa-crown section-icon"></i>
-                <span class="section-title">8. Правила для донатеров</span>
-                <span class="section-desc">Привилегии не дают иммунитета</span>
+                <span class="section-title">Руководство проекта</span>
+                <span class="section-desc">Высшая администрация</span>
             </div>
             <div class="rule-content">
-                <ul class="rule-list">
-                    <li class="rule-item"><span class="rule-text">📢 <strong>8.1</strong> Использование /bc не по назначению, нарушение правил раздела 4 — <span class="punishment">бан от 1 до 4 дней</span>.</span></li>
-                    <li class="rule-item"><span class="rule-text">🏷️ <strong>8.2</strong> Кастомный префикс должен соответствовать всем правилам сервера. Запрещены оскорбительные префиксы, а также префиксы, с помощью которых можно выдавать себя за администрацию (Helper, Moder и т.д). Нарушение = блокировка / снятие префикса.</span></li>
-                </ul>
-                <div class="warning-note">
-                    <i class="fas fa-info-circle"></i> Администрация оставляет за собой право блокировать аккаунты, нанесшие серьезный вред проекту, даже если аккаунт был передан или взломан. Ответственность всегда на владельце.
+                <div class="leadership-table">
+                    <div class="leadership-row"><span class="leadership-name">scallydima</span><span class="leadership-role">Основатель</span></div>
+                    <div class="leadership-row"><span class="leadership-name">babuinovv</span><span class="leadership-role">Управляющий Проектом</span></div>
+                    <div class="leadership-row"><span class="leadership-name">scallytema</span><span class="leadership-role">Управляющий Проектом</span></div>
+                    <div class="leadership-row"><span class="leadership-name">Damens</span><span class="leadership-role">Руководитель Проекта</span></div>
+                    <div class="leadership-row"><span class="leadership-name">Likior_ez</span><span class="leadership-role">Руководитель Проекта</span></div>
+                    <div class="leadership-row"><span class="leadership-name">FRANFu</span><span class="leadership-role">Куратор Проекта</span></div>
+                </div>
+                <div class="warning-note" style="margin-top: 0.5rem;">
+                    <i class="fas fa-info-circle"></i> Все остальные никак не относятся к руководству проекта.
                 </div>
             </div>
         </div>
@@ -501,7 +500,7 @@
         <!-- итоговый блок -->
         <div style="background: rgba(0,0,0,0.3); border-radius: 1.5rem; padding: 1.2rem; text-align: center; margin-top: 1rem;">
             <i class="fas fa-balance-scale"></i> Решения главной администрации окончательны.<br>
-            <span style="font-size: 0.75rem;">Актуальная версия правил: обязательно соблюдайте пункты 1.4, 1.6, 5.2 и 6.1.4 — грубые нарушения ведут к перманентной блокировке.</span>
+            <span style="font-size: 0.75rem;">Актуальная версия правил: обязательно соблюдайте пункты 1.3, 1.14, 1.15 — грубые нарушения ведут к перманентной блокировке.</span>
         </div>
     </div>
 
@@ -511,7 +510,6 @@
     </footer>
 </div>
 
-<!-- Небольшой скрипт для консольной информации -->
 <script>
     (function() {
         console.log("%c✨ KastWorld | Правила проекта загружены. Сервер: kastworld.aurorix.pro", "color: #a78bfa; font-size: 12px;");
